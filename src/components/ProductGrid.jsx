@@ -1,0 +1,82 @@
+import ProductCard from "./ProductCard";
+
+function ProductGrid() {
+  const products = [
+    {
+      id: 1,
+      title: "MacBook Air M2 13\"",
+      category: "Noutbuklar",
+      specs: "8GB RAM • 256GB SSD • Space Gray",
+      price: "12 400 000 so'm",
+      rating: "4.9",
+      stock: 5,
+      liked: true,
+      icon: "laptop",
+    },
+    {
+      id: 2,
+      title: "Sony WH-1000XM5",
+      category: "Audio",
+      specs: "Active Noise Cancelling • 30 soat batareya",
+      price: "4 200 000 so'm",
+      rating: "4.8",
+      stock: 2,
+      liked: false,
+      icon: "headphones",
+    },
+    {
+      id: 3,
+      title: "Keychron K2 Pro",
+      category: "Aksessuarlar",
+      specs: "Mexanik klaviatura • Bluetooth / USB-C",
+      price: "1 350 000 so'm",
+      rating: "4.7",
+      stock: 8,
+      liked: true,
+      icon: "keyboard",
+    },
+    {
+      id: 4,
+      title: "Apple Watch Series 9",
+      category: "Aksessuarlar",
+      specs: "45mm Aluminium • GPS • Midnight",
+      price: "5 100 000 so'm",
+      rating: "4.8",
+      stock: 4,
+      liked: false,
+      icon: "watch",
+    },
+    {
+      id: 5,
+      title: "ASUS Zenbook 14 OLED",
+      category: "Noutbuklar",
+      specs: "16GB RAM • 512GB SSD • Core Ultra 5",
+      price: "10 800 000 so'm",
+      rating: "4.7",
+      stock: 0,
+      liked: false,
+      icon: "laptop",
+    },
+    {
+      id: 6,
+      title: "Logitech MX Master 3S",
+      category: "Aksessuarlar",
+      specs: "8000 DPI • Silent Click • Wireless",
+      price: "1 180 000 so'm",
+      rating: "4.9",
+      stock: 6,
+      liked: false,
+      icon: "mouse",
+    },
+  ];
+
+  return (
+    <section className="product-grid" aria-label="Mahsulotlar katalogi">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </section>
+  );
+}
+
+export default ProductGrid;
